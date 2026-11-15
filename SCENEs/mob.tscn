@@ -25,7 +25,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qxuk3"]
+radius = 6.4631724
+height = 15.688471
 
 [node name="Mob" type="StaticBody2D" unique_id=108280175]
 collision_mask = 0
@@ -40,4 +42,4 @@ autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2119342297]
 scale = Vector2(1.7019507, 1.5297859)
-shape = SubResource("RectangleShape2D_h2yge")
+shape = SubResource("CapsuleShape2D_qxuk3")
