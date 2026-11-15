@@ -24,89 +24,115 @@ texture = ExtResource("2_1bvp3")
 [node name="Bugs" type="Node2D" parent="." unique_id=992924234]
 scale = Vector2(3.1171684, 3.1171684)
 
-[node name="Mob2" parent="Bugs" unique_id=1870421755 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
+[node name="Mob2" parent="Bugs" unique_id=1870421755 node_paths=PackedStringArray("AssignedPath", "ConnectedBugs") instance=ExtResource("2_h2yge")]
 position = Vector2(117, 94)
 rotation = -1.5707964
-AssignedPath = [NodePath("../../Paths/CrossPath1")]
+AssignedPath = [NodePath("../../Paths/CrossPath1"), NodePath("../../Paths/PathBug5_2"), NodePath("../../Paths/PathBug5")]
+ConnectedBugs = [NodePath("../Mob3"), NodePath("../Mob8"), NodePath("../Mob7")]
 
-[node name="Mob3" parent="Bugs" unique_id=1649457887 instance=ExtResource("2_h2yge")]
+[node name="Mob3" parent="Bugs" unique_id=1649457887 node_paths=PackedStringArray("AssignedPath", "ConnectedBugs") instance=ExtResource("2_h2yge")]
 position = Vector2(117, 159)
 rotation = -1.5707964
+AssignedPath = [NodePath("../../Paths/PathBug5"), NodePath("../../Paths/Path12"), NodePath("../../Paths/Path13"), NodePath("../../Paths/Path17")]
+ConnectedBugs = [NodePath("../Mob10"), NodePath("../Mob12")]
 
-[node name="Mob4" parent="Bugs" unique_id=2121013644 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
+[node name="Mob4" parent="Bugs" unique_id=2121013644 node_paths=PackedStringArray("AssignedPath", "ConnectedBugs") instance=ExtResource("2_h2yge")]
 position = Vector2(17, 83)
 rotation = -1.5707964
-AssignedPath = [NodePath("../../Paths/PathBug1"), NodePath("../../Paths/Path1")]
+AssignedPath = [NodePath("../../Paths/PathBug1"), NodePath("../../Paths/START")]
+ConnectedBugs = [NodePath("../Mob5")]
+CanBeKilled = true
 
-[node name="Mob5" parent="Bugs" unique_id=1669500165 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
+[node name="Mob5" parent="Bugs" unique_id=1669500165 node_paths=PackedStringArray("AssignedPath", "ConnectedBugs") instance=ExtResource("2_h2yge")]
 position = Vector2(39, 51)
 rotation = -1.5707964
 AssignedPath = [NodePath("../../Paths/PathBug2"), NodePath("../../Paths/PathBug2_2"), NodePath("../../Paths/PathBug1")]
+ConnectedBugs = [NodePath("../Mob19"), NodePath("../Mob6"), NodePath("../Mob4")]
 
-[node name="Mob6" parent="Bugs" unique_id=1668334118 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
+[node name="Mob6" parent="Bugs" unique_id=1668334118 node_paths=PackedStringArray("AssignedPath", "ConnectedBugs") instance=ExtResource("2_h2yge")]
 position = Vector2(99, 42)
 rotation = 1.5707964
-AssignedPath = [NodePath("../../Paths/PathBug4")]
+AssignedPath = [NodePath("../../Paths/PathBug4"), NodePath("../../Paths/PathBug2")]
+ConnectedBugs = [NodePath("../Mob5"), NodePath("../Mob19"), NodePath("../Mob7")]
 
 [node name="Mob20" parent="Bugs" unique_id=6563760 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
 position = Vector2(179, 49)
 rotation = -1.5707964
 AssignedPath = [NodePath("../../Paths/PathBug7")]
 
-[node name="Mob7" parent="Bugs" unique_id=1209934656 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
+[node name="Mob7" parent="Bugs" unique_id=1209934656 node_paths=PackedStringArray("AssignedPath", "ConnectedBugs") instance=ExtResource("2_h2yge")]
 position = Vector2(117, 59)
 AssignedPath = [NodePath("../../Paths/CrossPath1"), NodePath("../../Paths/PathBug2_2")]
+ConnectedBugs = [NodePath("../Mob6"), NodePath("../Mob8"), NodePath("../Mob2")]
 
 [node name="Mob19" parent="Bugs" unique_id=1438163771 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
 position = Vector2(30, 15)
-AssignedPath = [NodePath("../../Paths/PathBug3")]
+AssignedPath = [NodePath("../../Paths/PathBug3"), NodePath("../../Paths/PathBug2")]
 
-[node name="Mob8" parent="Bugs" unique_id=1081163732 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
+[node name="Mob8" parent="Bugs" unique_id=1081163732 node_paths=PackedStringArray("AssignedPath", "ConnectedBugs") instance=ExtResource("2_h2yge")]
 position = Vector2(148, 81)
-AssignedPath = [NodePath("../../Paths/PathBug6"), NodePath("../../Paths/Path6_2")]
+AssignedPath = [NodePath("../../Paths/PathBug6"), NodePath("../../Paths/PathBug8"), NodePath("../../Paths/CrossPath1")]
+ConnectedBugs = [NodePath("../Mob20"), NodePath("../Mob18"), NodePath("../Mob7")]
 
-[node name="Mob9" parent="Bugs" unique_id=1314296151 instance=ExtResource("2_h2yge")]
+[node name="Mob9" parent="Bugs" unique_id=1314296151 node_paths=PackedStringArray("AssignedPath", "ConnectedBugs") instance=ExtResource("2_h2yge")]
 position = Vector2(158, 173)
 rotation = -3.1415925
+AssignedPath = [NodePath("../../Paths/Path12"), NodePath("../../Paths/Path14"), NodePath("../../Paths/Path15"), NodePath("../../Paths/Path16")]
+ConnectedBugs = [NodePath("../Mob3")]
 
-[node name="Mob10" parent="Bugs" unique_id=325729223 instance=ExtResource("2_h2yge")]
+[node name="Mob10" parent="Bugs" unique_id=325729223 node_paths=PackedStringArray("AssignedPath", "ConnectedBugs") instance=ExtResource("2_h2yge")]
 position = Vector2(73, 153)
+AssignedPath = [NodePath("../../Paths/Path17"), NodePath("../../Paths/Path18")]
+ConnectedBugs = [NodePath("../Mob11")]
 
-[node name="Mob11" parent="Bugs" unique_id=967035576 instance=ExtResource("2_h2yge")]
+[node name="Mob11" parent="Bugs" unique_id=967035576 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
 position = Vector2(28, 183)
+AssignedPath = [NodePath("../../Paths/Path18"), NodePath("../../Paths/Path22LOSS")]
 
-[node name="Mob12" parent="Bugs" unique_id=1871635222 instance=ExtResource("2_h2yge")]
+[node name="Mob12" parent="Bugs" unique_id=1871635222 node_paths=PackedStringArray("AssignedPath", "ConnectedBugs") instance=ExtResource("2_h2yge")]
 position = Vector2(109, 203)
 rotation = 1.5707964
+AssignedPath = [NodePath("../../Paths/Path17"), NodePath("../../Paths/Path13"), NodePath("../../Paths/Path20"), NodePath("../../Paths/Path19")]
+ConnectedBugs = [NodePath("../Mob13"), NodePath("../Mob15")]
 
-[node name="Mob13" parent="Bugs" unique_id=1380747247 instance=ExtResource("2_h2yge")]
+[node name="Mob13" parent="Bugs" unique_id=1380747247 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
 position = Vector2(67, 221)
 rotation = -1.5707964
+AssignedPath = [NodePath("../../Paths/Path20"), NodePath("../../Paths/Path21LOSS")]
 
-[node name="Mob14" parent="Bugs" unique_id=779720199 instance=ExtResource("2_h2yge")]
+[node name="Mob14" parent="Bugs" unique_id=779720199 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
 position = Vector2(169, 225)
 rotation = -1.5707964
+AssignedPath = [NodePath("../../Paths/Path16"), NodePath("../../Paths/Path20LOSS")]
 
-[node name="Mob15" parent="Bugs" unique_id=1929523669 instance=ExtResource("2_h2yge")]
+[node name="Mob15" parent="Bugs" unique_id=1929523669 node_paths=PackedStringArray("AssignedPath", "ConnectedBugs") instance=ExtResource("2_h2yge")]
 position = Vector2(149, 241)
+AssignedPath = [NodePath("../../Paths/Path16"), NodePath("../../Paths/Path19"), NodePath("../../Paths/Path15"), NodePath("../../Paths/Path20")]
+ConnectedBugs = [NodePath("../Mob14"), NodePath("../Mob16")]
 
-[node name="Mob16" parent="Bugs" unique_id=213714547 instance=ExtResource("2_h2yge")]
+[node name="Mob16" parent="Bugs" unique_id=213714547 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
 position = Vector2(233, 198)
+AssignedPath = [NodePath("../../Paths/Path5"), NodePath("../../Paths/Path15"), NodePath("../../Paths/Path16"), NodePath("../../Paths/Path14"), NodePath("../../Paths/PathBug9")]
 
-[node name="Mob17" parent="Bugs" unique_id=1392735932 instance=ExtResource("2_h2yge")]
+[node name="Mob17" parent="Bugs" unique_id=1392735932 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
 position = Vector2(227, 125)
+AssignedPath = [NodePath("../../Paths/END"), NodePath("../../Paths/PathBug9")]
 
-[node name="Mob18" parent="Bugs" unique_id=1237929151 instance=ExtResource("2_h2yge")]
+[node name="Mob18" parent="Bugs" unique_id=1237929151 node_paths=PackedStringArray("AssignedPath", "ConnectedBugs") instance=ExtResource("2_h2yge")]
 position = Vector2(187, 103)
+AssignedPath = [NodePath("../../Paths/PathBug8"), NodePath("../../Paths/PathBug9"), NodePath("../../Paths/Path14"), NodePath("../../Paths/Path15"), NodePath("../../Paths/Path16"), NodePath("../../Paths/PathBug6")]
+ConnectedBugs = [NodePath("../Mob17"), NodePath("../Mob9"), NodePath("../Mob16")]
 
-[node name="Mob" parent="Bugs" unique_id=108280175 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
+[node name="Mob" parent="Bugs" unique_id=108280175 node_paths=PackedStringArray("AssignedPath", "ConnectedBugs") instance=ExtResource("2_h2yge")]
 position = Vector2(76.35135, 109.07335)
 AssignedPath = [NodePath("../../Paths/PathBug5"), NodePath("../../Paths/PathBug5_2")]
+ConnectedBugs = [NodePath("../Mob2"), NodePath("../Mob3")]
+CanBeKilled = true
 
 [node name="Paths" type="Node2D" parent="." unique_id=2136322964]
 scale = Vector2(3.128571, 3.128571)
 
-[node name="Path1" type="Line2D" parent="Paths" unique_id=1407073767]
+[node name="START" type="Line2D" parent="Paths" unique_id=1407073767]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 points = PackedVector2Array(0, 119, 17, 119, 22, 121, 21, 125, 21, 128, 22, 131, 20, 135, 22, 138, 25, 141, 28, 142, 32, 141, 38, 141, 44, 141, 49, 140, 49, 134, 49, 122, 49, 118, 58, 118, 69, 119, 76, 119, 51, 119, 48, 114, 48, 99, 45, 97, 41, 96, 35, 97, 29, 97, 26, 96, 27, 92, 27, 83)
@@ -246,7 +272,7 @@ texture_mode = 1
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(161, 86)
-points = PackedVector2Array(-61, 99, -62, 80, -64, 77, -69, 76, -88, 77)
+points = PackedVector2Array(-62.552505, 114.73064, -62, 80, -64, 77, -69, 76, -88, 77)
 width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
@@ -287,7 +313,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path1B" type="Line2D" parent="Paths" unique_id=2068735893]
+[node name="AlwaysActivePath" type="Line2D" parent="Paths" unique_id=2068735893]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(61, 64)
@@ -296,7 +322,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path12end" type="Line2D" parent="Paths" unique_id=1344097603]
+[node name="END" type="Line2D" parent="Paths" unique_id=1344097603]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(289, 36)
@@ -305,7 +331,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path11" type="Line2D" parent="Paths" unique_id=1848630334]
+[node name="PathBug9" type="Line2D" parent="Paths" unique_id=1848630334]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(248, 14)
@@ -314,7 +340,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path6_2" type="Line2D" parent="Paths" unique_id=1928789983]
+[node name="PathBug8" type="Line2D" parent="Paths" unique_id=1928789983]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(209, -8)
