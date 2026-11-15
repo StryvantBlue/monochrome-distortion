@@ -89,6 +89,13 @@ rotation = 1.5707964
 [node name="CollisionShape2D" parent="Mob6" index="1" unique_id=2119342297]
 scale = Vector2(1.1803944, 1.1605405)
 
+[node name="Mob20" parent="." unique_id=6563760 instance=ExtResource("2_h2yge")]
+position = Vector2(179, 49)
+rotation = -1.5707964
+
+[node name="CollisionShape2D" parent="Mob20" index="1" unique_id=2119342297]
+scale = Vector2(1.1803944, 1.1605405)
+
 [node name="Mob7" parent="." unique_id=1209934656 instance=ExtResource("2_h2yge")]
 position = Vector2(117, 59)
 
@@ -127,7 +134,7 @@ position = Vector2(28, 183)
 scale = Vector2(1.1546898, 1.1190773)
 
 [node name="Mob12" parent="." unique_id=1871635222 instance=ExtResource("2_h2yge")]
-position = Vector2(109, 208)
+position = Vector2(109, 203)
 rotation = 1.5707964
 
 [node name="CollisionShape2D" parent="Mob12" index="1" unique_id=2119342297]
@@ -225,11 +232,192 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
+[node name="Path4loss3" type="Line2D" parent="." unique_id=575793079]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(282, 73)
+rotation = 1.5707964
+points = PackedVector2Array(-43.999996, 94, -35, 92, -45, 95, -38, 97, -41, 105, -43, 101, -45, 97, -42, 90, -44, 87, -45, 84, -44, 89, -47, 89, -35, 85, -50, 90, -41, 77, -49, 93, -51, 100, -51, 105, -44, 107, -43.999996, 92, -48, 77, -49, 73, -38.999996, 92, -23.999996, 92)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
 [node name="Path5" type="Line2D" parent="." unique_id=514428484]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
-position = Vector2(-29, -47)
-points = PackedVector2Array(-30, 100, -51, 100)
+position = Vector2(294, 108)
+points = PackedVector2Array(-61, 99, -29, 99)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path12" type="Line2D" parent="." unique_id=1239903699]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(186, 64)
+points = PackedVector2Array(-61, 99, -29, 99)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path22LOSS" type="Line2D" parent="." unique_id=1650522702]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(89, 94)
+points = PackedVector2Array(-61, 99, -104, 99, -103, 149, -90, 147, -78, 147, -74, 148, -73, 154, -74, 162)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path20" type="Line2D" parent="." unique_id=1838606400]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(159, 107)
+points = PackedVector2Array(-61, 99, -80, 100, -82, 105, -82, 114)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path21LOSS" type="Line2D" parent="." unique_id=1033467684]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(138, 122)
+points = PackedVector2Array(-61, 99, -62, 118, -71, 119, -82, 120, -82, 124, -83, 135)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path20LOSS" type="Line2D" parent="." unique_id=1646762986]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(239, 126)
+points = PackedVector2Array(-61, 99, -60, 83, -64, 80, -91, 81, -107, 71, -108, 78, -101, 81, -95, 82, -94, 85, -96, 88, -104, 84, -98, 67, -90, 68, -91, 72, -95, 74, -103, 67, -108, 84, -99, 91)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path19" type="Line2D" parent="." unique_id=628856598]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(160, 104)
+points = PackedVector2Array(-61, 99, -61, 121, -58, 125, -48, 126, -31, 125, -28, 129, -28, 144, -28, 147, -23, 147, -11, 147)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path18" type="Line2D" parent="." unique_id=1202580301]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(134, 64)
+points = PackedVector2Array(-61, 99, -79, 100, -79, 104, -78, 126, -81, 130, -90, 129, -106, 129)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path17" type="Line2D" parent="." unique_id=171024609]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(161, 86)
+points = PackedVector2Array(-61, 99, -62, 80, -64, 77, -69, 76, -88, 77)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path16" type="Line2D" parent="." unique_id=817243585]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(268, 105)
+points = PackedVector2Array(-61, 96, -61, 124, -70, 124, -89, 122, -88, 128, -88, 138, -90, 146, -96, 147, -108, 146, -119, 146)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path15" type="Line2D" parent="." unique_id=1988952858]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(219, 64)
+points = PackedVector2Array(-61, 99, -34, 100, -33, 114, -34, 118, -31, 122, -13, 121, -11, 126, -11, 140, -11, 143, 14, 143)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path14" type="Line2D" parent="." unique_id=1943209547]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(218, 64)
+points = PackedVector2Array(-61, 99, -34, 99, -31, 94, -35, 94, -25, 93, -14, 93, -11, 92, -10, 88, -11, 73, -6, 70)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path13" type="Line2D" parent="." unique_id=350030140]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(186, 64)
+points = PackedVector2Array(-61, 99, -56, 105, -59, 106, -59, 110, -59, 121, -62, 121, -72, 121, -83, 121, -87, 122, -87, 127, -87, 139)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path1B" type="Line2D" parent="." unique_id=2068735893]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(61, 64)
+points = PackedVector2Array(-61, 99, -41, 98, -39, 85, -40, 78, -34, 76)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path12end" type="Line2D" parent="." unique_id=1344097603]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(289, 36)
+points = PackedVector2Array(-62, 99, -42, 99, -41.507965, 87.683426, -41, 76, -38, 76, -33, 76, -43, 83, -42, 109, -41, 121, -32, 122)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path11" type="Line2D" parent="." unique_id=1848630334]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(248, 14)
+points = PackedVector2Array(-61, 99, -42, 99, -42, 110, -40, 120, -21, 121)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path10" type="Line2D" parent="." unique_id=1928789983]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(209, -8)
+points = PackedVector2Array(-61, 99, -43, 98, -42, 116, -39, 121, -32, 120, -23, 122)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path9" type="Line2D" parent="." unique_id=806726452]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(209, -9)
+points = PackedVector2Array(-61, 99, -41, 99, -42, 86, -41, 78, -20, 77, -19, 63, -19, 58)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path8" type="Line2D" parent="." unique_id=1215183978]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(168, -31)
+points = PackedVector2Array(-51, 100, -41, 100, -41, 112, -40, 120, -40, 125, -35, 122, -20, 121)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path7" type="Line2D" parent="." unique_id=216065200]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(101, -53)
+points = PackedVector2Array(-49, 100, -11, 99, -11, 109, -11, 119, -10, 123, 0, 122, 16, 122)
 width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
@@ -245,6 +433,7 @@ texture_mode = 1
 
 [editable path="Node2D"]
 [editable path="Mob6"]
+[editable path="Mob20"]
 [editable path="Mob7"]
 [editable path="Mob19"]
 [editable path="Mob8"]
