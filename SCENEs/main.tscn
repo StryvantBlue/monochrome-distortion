@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://bx4c3eqpb1hnh"]
 
-[ext_resource type="PackedScene" uid="uid://c0qkedt1vb5yn" path="res://SCENEs/node_2d.tscn" id="1_0xm2m"]
-[ext_resource type="Texture2D" uid="uid://d3kqt712e1x7i" path="res://SPRITEs/Untitled 11-11-2026 08-55-36 (3).png" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://c0qkedt1vb5yn" path="res://SCENEs/MouseCursor.tscn" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://d3kqt712e1x7i" path="res://SPRITEs/level1.png" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://7067kh7kyiih" path="res://SCENEs/mob.tscn" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://b51m4p0j3enfv" path="res://SCRIPTs/mob.gd" id="3_lquwl"]
-[ext_resource type="Texture2D" uid="uid://q44viqkwcrx" path="res://SPRITEs/Untitled 11-13-2026 04-43-00.png" id="4_7mycd"]
+[ext_resource type="Texture2D" uid="uid://q44viqkwcrx" path="res://SPRITEs/bug_anim.png" id="4_7mycd"]
 [ext_resource type="Shader" uid="uid://c3j2jcyvilqgn" path="res://new_shader.gdshader" id="6_7mycd"]
-[ext_resource type="Texture2D" uid="uid://bkoamreqy47jn" path="res://SPRITEs/Untitled 11-11-2026 08-46-05 (1).png" id="7_272bh"]
+[ext_resource type="Texture2D" uid="uid://bkoamreqy47jn" path="res://SPRITEs/handle.png" id="7_272bh"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_mhqvc"]
+random_pitch = 1.3218727
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p11y5"]
 atlas = ExtResource("4_7mycd")
@@ -40,10 +43,14 @@ shader_parameter/border_thickness = 0.15
 
 [node name="Main" type="Node2D" unique_id=532649651]
 
-[node name="Node2D" parent="." unique_id=1175423691 instance=ExtResource("1_0xm2m")]
-
-[node name="Sprite2D" parent="Node2D" index="0" unique_id=357539359]
+[node name="BACKGROUND" type="Sprite2D" parent="." unique_id=975844962]
+position = Vector2(128, 128)
 texture = ExtResource("2_1bvp3")
+
+[node name="MouseCursor" parent="." unique_id=1175423691 instance=ExtResource("1_0xm2m")]
+
+[node name="AudioStreamPlayer2D" parent="MouseCursor" index="2" unique_id=1202256869]
+stream = SubResource("AudioStreamRandomizer_mhqvc")
 
 [node name="Mob" type="RigidBody2D" parent="." unique_id=160876704 groups=["idfk"]]
 position = Vector2(76, 109)
@@ -181,7 +188,7 @@ scale = Vector2(1.1546898, 1.1190773)
 [node name="Path1" type="Line2D" parent="." unique_id=1407073767]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
-points = PackedVector2Array(-2, 119, 17, 119, 22, 121, 21, 125, 21, 128, 22, 131, 20, 135, 22, 138, 25, 141, 28, 142, 32, 141, 38, 141, 44, 141, 49, 140, 49, 134, 49, 122, 49, 118, 58, 118, 69, 119, 76, 119, 51, 119, 48, 114, 48, 99, 45, 97, 41, 96, 35, 97, 29, 97, 26, 96, 27, 92, 27, 83)
+points = PackedVector2Array(0, 119, 17, 119, 22, 121, 21, 125, 21, 128, 22, 131, 20, 135, 22, 138, 25, 141, 28, 142, 32, 141, 38, 141, 44, 141, 49, 140, 49, 134, 49, 122, 49, 118, 58, 118, 69, 119, 76, 119, 51, 119, 48, 114, 48, 99, 45, 97, 41, 96, 35, 97, 29, 97, 26, 96, 27, 92, 27, 83)
 width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
@@ -431,7 +438,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[editable path="Node2D"]
+[editable path="MouseCursor"]
 [editable path="Mob6"]
 [editable path="Mob20"]
 [editable path="Mob7"]
