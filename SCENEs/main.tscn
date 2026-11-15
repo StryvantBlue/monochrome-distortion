@@ -3,37 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://c0qkedt1vb5yn" path="res://SCENEs/MouseCursor.tscn" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://d3kqt712e1x7i" path="res://SPRITEs/level1.png" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://7067kh7kyiih" path="res://SCENEs/mob.tscn" id="2_h2yge"]
-[ext_resource type="Script" uid="uid://b51m4p0j3enfv" path="res://SCRIPTs/mob.gd" id="3_lquwl"]
-[ext_resource type="Texture2D" uid="uid://q44viqkwcrx" path="res://SPRITEs/bug_anim.png" id="4_7mycd"]
 [ext_resource type="Shader" uid="uid://c3j2jcyvilqgn" path="res://new_shader.gdshader" id="6_7mycd"]
 [ext_resource type="Texture2D" uid="uid://bkoamreqy47jn" path="res://SPRITEs/handle.png" id="7_272bh"]
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_mhqvc"]
-random_pitch = 1.3218727
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p11y5"]
-atlas = ExtResource("4_7mycd")
-region = Rect2(0, 0, 15, 15)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s5nov"]
-atlas = ExtResource("4_7mycd")
-region = Rect2(15, 0, 15, 15)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_geuht"]
-animations = [{
-"frames": [{
-"duration": 1.5,
-"texture": SubResource("AtlasTexture_p11y5")
-}, {
-"duration": 2.0,
-"texture": SubResource("AtlasTexture_s5nov")
-}],
-"loop": 1,
-"name": &"Idle",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_272bh"]
 shader = ExtResource("6_7mycd")
@@ -44,148 +15,137 @@ shader_parameter/border_thickness = 0.15
 [node name="Main" type="Node2D" unique_id=532649651]
 
 [node name="BACKGROUND" type="Sprite2D" parent="." unique_id=975844962]
-position = Vector2(128, 128)
+position = Vector2(399.99997, 400)
+scale = Vector2(3.1249998, 3.125)
 texture = ExtResource("2_1bvp3")
 
 [node name="MouseCursor" parent="." unique_id=1175423691 instance=ExtResource("1_0xm2m")]
 
-[node name="AudioStreamPlayer2D" parent="MouseCursor" index="2" unique_id=1202256869]
-stream = SubResource("AudioStreamRandomizer_mhqvc")
+[node name="Bugs" type="Node2D" parent="." unique_id=992924234]
+scale = Vector2(3.1171684, 3.1171684)
 
-[node name="Mob" type="RigidBody2D" parent="." unique_id=160876704 groups=["idfk"]]
-position = Vector2(76, 109)
-collision_mask = 0
-input_pickable = true
-gravity_scale = 0.0
-script = ExtResource("3_lquwl")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Mob" unique_id=1786994469 groups=["idfk"]]
-scale = Vector2(2, 2)
-sprite_frames = SubResource("SpriteFrames_geuht")
-animation = &"Idle"
-autoplay = "Idle"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mob" unique_id=2119342297 groups=["idfk"]]
-scale = Vector2(1.7019507, 1.5297859)
-shape = SubResource("RectangleShape2D_h2yge")
-
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Mob" unique_id=387959066 groups=["idfk"]]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Mob" unique_id=2012630972]
-
-[node name="Mob2" parent="." unique_id=1870421755 instance=ExtResource("2_h2yge")]
+[node name="Mob2" parent="Bugs" unique_id=1870421755 instance=ExtResource("2_h2yge")]
 position = Vector2(117, 94)
 rotation = -1.5707964
 
-[node name="Mob3" parent="." unique_id=1649457887 instance=ExtResource("2_h2yge")]
+[node name="Mob3" parent="Bugs" unique_id=1649457887 instance=ExtResource("2_h2yge")]
 position = Vector2(117, 159)
 rotation = -1.5707964
 
-[node name="Mob4" parent="." unique_id=2121013644 instance=ExtResource("2_h2yge")]
+[node name="Mob4" parent="Bugs" unique_id=2121013644 instance=ExtResource("2_h2yge")]
 position = Vector2(17, 83)
 rotation = -1.5707964
 
-[node name="Mob5" parent="." unique_id=1669500165 instance=ExtResource("2_h2yge")]
+[node name="Mob5" parent="Bugs" unique_id=1669500165 instance=ExtResource("2_h2yge")]
 position = Vector2(39, 51)
 rotation = -1.5707964
 
-[node name="Mob6" parent="." unique_id=1668334118 instance=ExtResource("2_h2yge")]
+[node name="Mob6" parent="Bugs" unique_id=1668334118 instance=ExtResource("2_h2yge")]
 position = Vector2(99, 42)
 rotation = 1.5707964
 
-[node name="CollisionShape2D" parent="Mob6" index="1" unique_id=2119342297]
+[node name="CollisionShape2D" parent="Bugs/Mob6" index="1" unique_id=2119342297]
 scale = Vector2(1.1803944, 1.1605405)
 
-[node name="Mob20" parent="." unique_id=6563760 instance=ExtResource("2_h2yge")]
+[node name="Mob20" parent="Bugs" unique_id=6563760 instance=ExtResource("2_h2yge")]
 position = Vector2(179, 49)
 rotation = -1.5707964
 
-[node name="CollisionShape2D" parent="Mob20" index="1" unique_id=2119342297]
+[node name="CollisionShape2D" parent="Bugs/Mob20" index="1" unique_id=2119342297]
 scale = Vector2(1.1803944, 1.1605405)
 
-[node name="Mob7" parent="." unique_id=1209934656 instance=ExtResource("2_h2yge")]
+[node name="Mob7" parent="Bugs" unique_id=1209934656 instance=ExtResource("2_h2yge")]
 position = Vector2(117, 59)
 
-[node name="CollisionShape2D" parent="Mob7" index="1" unique_id=2119342297]
+[node name="CollisionShape2D" parent="Bugs/Mob7" index="1" unique_id=2119342297]
 scale = Vector2(1.1546898, 1.1190773)
 
-[node name="Mob19" parent="." unique_id=1438163771 instance=ExtResource("2_h2yge")]
+[node name="Mob19" parent="Bugs" unique_id=1438163771 instance=ExtResource("2_h2yge")]
 position = Vector2(30, 15)
 
-[node name="CollisionShape2D" parent="Mob19" index="1" unique_id=2119342297]
+[node name="CollisionShape2D" parent="Bugs/Mob19" index="1" unique_id=2119342297]
 scale = Vector2(1.1546898, 1.1190773)
 
-[node name="Mob8" parent="." unique_id=1081163732 instance=ExtResource("2_h2yge")]
+[node name="Mob8" parent="Bugs" unique_id=1081163732 instance=ExtResource("2_h2yge")]
 position = Vector2(148, 81)
 
-[node name="CollisionShape2D" parent="Mob8" index="1" unique_id=2119342297]
+[node name="CollisionShape2D" parent="Bugs/Mob8" index="1" unique_id=2119342297]
 scale = Vector2(1.1546898, 1.1190773)
 
-[node name="Mob9" parent="." unique_id=1314296151 instance=ExtResource("2_h2yge")]
+[node name="Mob9" parent="Bugs" unique_id=1314296151 instance=ExtResource("2_h2yge")]
 position = Vector2(158, 173)
-rotation = 3.1415927
+rotation = -3.1415925
 
-[node name="CollisionShape2D" parent="Mob9" index="1" unique_id=2119342297]
+[node name="CollisionShape2D" parent="Bugs/Mob9" index="1" unique_id=2119342297]
 scale = Vector2(1.1546898, 1.1190773)
 
-[node name="Mob10" parent="." unique_id=325729223 instance=ExtResource("2_h2yge")]
+[node name="Mob10" parent="Bugs" unique_id=325729223 instance=ExtResource("2_h2yge")]
 position = Vector2(73, 153)
 
-[node name="CollisionShape2D" parent="Mob10" index="1" unique_id=2119342297]
+[node name="CollisionShape2D" parent="Bugs/Mob10" index="1" unique_id=2119342297]
 scale = Vector2(1.1546898, 1.1190773)
 
-[node name="Mob11" parent="." unique_id=967035576 instance=ExtResource("2_h2yge")]
+[node name="Mob11" parent="Bugs" unique_id=967035576 instance=ExtResource("2_h2yge")]
 position = Vector2(28, 183)
 
-[node name="CollisionShape2D" parent="Mob11" index="1" unique_id=2119342297]
+[node name="CollisionShape2D" parent="Bugs/Mob11" index="1" unique_id=2119342297]
 scale = Vector2(1.1546898, 1.1190773)
 
-[node name="Mob12" parent="." unique_id=1871635222 instance=ExtResource("2_h2yge")]
+[node name="Mob12" parent="Bugs" unique_id=1871635222 instance=ExtResource("2_h2yge")]
 position = Vector2(109, 203)
 rotation = 1.5707964
 
-[node name="CollisionShape2D" parent="Mob12" index="1" unique_id=2119342297]
+[node name="CollisionShape2D" parent="Bugs/Mob12" index="1" unique_id=2119342297]
 scale = Vector2(1.1546898, 1.1190773)
 
-[node name="Mob13" parent="." unique_id=1380747247 instance=ExtResource("2_h2yge")]
+[node name="Mob13" parent="Bugs" unique_id=1380747247 instance=ExtResource("2_h2yge")]
 position = Vector2(67, 221)
 rotation = -1.5707964
 
-[node name="CollisionShape2D" parent="Mob13" index="1" unique_id=2119342297]
+[node name="CollisionShape2D" parent="Bugs/Mob13" index="1" unique_id=2119342297]
 scale = Vector2(1.1546898, 1.1190773)
 
-[node name="Mob14" parent="." unique_id=779720199 instance=ExtResource("2_h2yge")]
+[node name="Mob14" parent="Bugs" unique_id=779720199 instance=ExtResource("2_h2yge")]
 position = Vector2(169, 225)
 rotation = -1.5707964
 
-[node name="CollisionShape2D" parent="Mob14" index="1" unique_id=2119342297]
+[node name="CollisionShape2D" parent="Bugs/Mob14" index="1" unique_id=2119342297]
 scale = Vector2(1.1546898, 1.1190773)
 
-[node name="Mob15" parent="." unique_id=1929523669 instance=ExtResource("2_h2yge")]
+[node name="Mob15" parent="Bugs" unique_id=1929523669 instance=ExtResource("2_h2yge")]
 position = Vector2(149, 241)
 
-[node name="CollisionShape2D" parent="Mob15" index="1" unique_id=2119342297]
+[node name="CollisionShape2D" parent="Bugs/Mob15" index="1" unique_id=2119342297]
 scale = Vector2(1.1546898, 1.1190773)
 
-[node name="Mob16" parent="." unique_id=213714547 instance=ExtResource("2_h2yge")]
+[node name="Mob16" parent="Bugs" unique_id=213714547 instance=ExtResource("2_h2yge")]
 position = Vector2(233, 198)
 
-[node name="CollisionShape2D" parent="Mob16" index="1" unique_id=2119342297]
+[node name="CollisionShape2D" parent="Bugs/Mob16" index="1" unique_id=2119342297]
 scale = Vector2(1.1546898, 1.1190773)
 
-[node name="Mob17" parent="." unique_id=1392735932 instance=ExtResource("2_h2yge")]
+[node name="Mob17" parent="Bugs" unique_id=1392735932 instance=ExtResource("2_h2yge")]
 position = Vector2(227, 125)
 
-[node name="CollisionShape2D" parent="Mob17" index="1" unique_id=2119342297]
+[node name="CollisionShape2D" parent="Bugs/Mob17" index="1" unique_id=2119342297]
 scale = Vector2(1.1546898, 1.1190773)
 
-[node name="Mob18" parent="." unique_id=1237929151 instance=ExtResource("2_h2yge")]
+[node name="Mob18" parent="Bugs" unique_id=1237929151 instance=ExtResource("2_h2yge")]
 position = Vector2(187, 103)
 
-[node name="CollisionShape2D" parent="Mob18" index="1" unique_id=2119342297]
+[node name="CollisionShape2D" parent="Bugs/Mob18" index="1" unique_id=2119342297]
 scale = Vector2(1.1546898, 1.1190773)
 
-[node name="Path1" type="Line2D" parent="." unique_id=1407073767]
+[node name="Mob" parent="Bugs" unique_id=108280175 instance=ExtResource("2_h2yge")]
+position = Vector2(76.35135, 109.07335)
+
+[node name="CollisionShape2D" parent="Bugs/Mob" index="1" unique_id=2119342297]
+scale = Vector2(1.1546898, 1.1190773)
+
+[node name="Paths" type="Node2D" parent="." unique_id=2136322964]
+scale = Vector2(3.128571, 3.128571)
+
+[node name="Path1" type="Line2D" parent="Paths" unique_id=1407073767]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 points = PackedVector2Array(0, 119, 17, 119, 22, 121, 21, 125, 21, 128, 22, 131, 20, 135, 22, 138, 25, 141, 28, 142, 32, 141, 38, 141, 44, 141, 49, 140, 49, 134, 49, 122, 49, 118, 58, 118, 69, 119, 76, 119, 51, 119, 48, 114, 48, 99, 45, 97, 41, 96, 35, 97, 29, 97, 26, 96, 27, 92, 27, 83)
@@ -193,7 +153,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path2L" type="Line2D" parent="." unique_id=366243923]
+[node name="Path2L" type="Line2D" parent="Paths" unique_id=366243923]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(78, 0)
@@ -202,7 +162,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path2R" type="Line2D" parent="." unique_id=1185108145]
+[node name="Path2R" type="Line2D" parent="Paths" unique_id=1185108145]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(78, 0)
@@ -211,7 +171,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path3" type="Line2D" parent="." unique_id=1376657648]
+[node name="Path3" type="Line2D" parent="Paths" unique_id=1376657648]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(29, -36)
@@ -220,7 +180,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path4loss" type="Line2D" parent="." unique_id=437976993]
+[node name="Path4loss" type="Line2D" parent="Paths" unique_id=437976993]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(51, -68)
@@ -229,7 +189,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path4loss2" type="Line2D" parent="." unique_id=1412402064]
+[node name="Path4loss2" type="Line2D" parent="Paths" unique_id=1412402064]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(203, 38)
@@ -239,7 +199,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path4loss3" type="Line2D" parent="." unique_id=575793079]
+[node name="Path4loss3" type="Line2D" parent="Paths" unique_id=575793079]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(282, 73)
@@ -249,7 +209,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path5" type="Line2D" parent="." unique_id=514428484]
+[node name="Path5" type="Line2D" parent="Paths" unique_id=514428484]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(294, 108)
@@ -258,7 +218,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path12" type="Line2D" parent="." unique_id=1239903699]
+[node name="Path12" type="Line2D" parent="Paths" unique_id=1239903699]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(186, 64)
@@ -267,7 +227,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path22LOSS" type="Line2D" parent="." unique_id=1650522702]
+[node name="Path22LOSS" type="Line2D" parent="Paths" unique_id=1650522702]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(89, 94)
@@ -276,7 +236,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path20" type="Line2D" parent="." unique_id=1838606400]
+[node name="Path20" type="Line2D" parent="Paths" unique_id=1838606400]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(159, 107)
@@ -285,7 +245,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path21LOSS" type="Line2D" parent="." unique_id=1033467684]
+[node name="Path21LOSS" type="Line2D" parent="Paths" unique_id=1033467684]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(138, 122)
@@ -294,7 +254,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path20LOSS" type="Line2D" parent="." unique_id=1646762986]
+[node name="Path20LOSS" type="Line2D" parent="Paths" unique_id=1646762986]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(239, 126)
@@ -303,7 +263,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path19" type="Line2D" parent="." unique_id=628856598]
+[node name="Path19" type="Line2D" parent="Paths" unique_id=628856598]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(160, 104)
@@ -312,7 +272,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path18" type="Line2D" parent="." unique_id=1202580301]
+[node name="Path18" type="Line2D" parent="Paths" unique_id=1202580301]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(134, 64)
@@ -321,7 +281,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path17" type="Line2D" parent="." unique_id=171024609]
+[node name="Path17" type="Line2D" parent="Paths" unique_id=171024609]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(161, 86)
@@ -330,7 +290,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path16" type="Line2D" parent="." unique_id=817243585]
+[node name="Path16" type="Line2D" parent="Paths" unique_id=817243585]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(268, 105)
@@ -339,7 +299,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path15" type="Line2D" parent="." unique_id=1988952858]
+[node name="Path15" type="Line2D" parent="Paths" unique_id=1988952858]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(219, 64)
@@ -348,7 +308,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path14" type="Line2D" parent="." unique_id=1943209547]
+[node name="Path14" type="Line2D" parent="Paths" unique_id=1943209547]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(218, 64)
@@ -357,7 +317,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path13" type="Line2D" parent="." unique_id=350030140]
+[node name="Path13" type="Line2D" parent="Paths" unique_id=350030140]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(186, 64)
@@ -366,7 +326,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path1B" type="Line2D" parent="." unique_id=2068735893]
+[node name="Path1B" type="Line2D" parent="Paths" unique_id=2068735893]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(61, 64)
@@ -375,7 +335,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path12end" type="Line2D" parent="." unique_id=1344097603]
+[node name="Path12end" type="Line2D" parent="Paths" unique_id=1344097603]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(289, 36)
@@ -384,7 +344,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path11" type="Line2D" parent="." unique_id=1848630334]
+[node name="Path11" type="Line2D" parent="Paths" unique_id=1848630334]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(248, 14)
@@ -393,7 +353,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path10" type="Line2D" parent="." unique_id=1928789983]
+[node name="Path10" type="Line2D" parent="Paths" unique_id=1928789983]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(209, -8)
@@ -402,7 +362,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path9" type="Line2D" parent="." unique_id=806726452]
+[node name="Path9" type="Line2D" parent="Paths" unique_id=806726452]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(209, -9)
@@ -411,7 +371,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path8" type="Line2D" parent="." unique_id=1215183978]
+[node name="Path8" type="Line2D" parent="Paths" unique_id=1215183978]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(168, -31)
@@ -420,7 +380,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path7" type="Line2D" parent="." unique_id=216065200]
+[node name="Path7" type="Line2D" parent="Paths" unique_id=216065200]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(101, -53)
@@ -429,7 +389,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path6" type="Line2D" parent="." unique_id=1948554772]
+[node name="Path6" type="Line2D" parent="Paths" unique_id=1948554772]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(100, -49)
@@ -438,19 +398,19 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[editable path="MouseCursor"]
-[editable path="Mob6"]
-[editable path="Mob20"]
-[editable path="Mob7"]
-[editable path="Mob19"]
-[editable path="Mob8"]
-[editable path="Mob9"]
-[editable path="Mob10"]
-[editable path="Mob11"]
-[editable path="Mob12"]
-[editable path="Mob13"]
-[editable path="Mob14"]
-[editable path="Mob15"]
-[editable path="Mob16"]
-[editable path="Mob17"]
-[editable path="Mob18"]
+[editable path="Bugs/Mob6"]
+[editable path="Bugs/Mob20"]
+[editable path="Bugs/Mob7"]
+[editable path="Bugs/Mob19"]
+[editable path="Bugs/Mob8"]
+[editable path="Bugs/Mob9"]
+[editable path="Bugs/Mob10"]
+[editable path="Bugs/Mob11"]
+[editable path="Bugs/Mob12"]
+[editable path="Bugs/Mob13"]
+[editable path="Bugs/Mob14"]
+[editable path="Bugs/Mob15"]
+[editable path="Bugs/Mob16"]
+[editable path="Bugs/Mob17"]
+[editable path="Bugs/Mob18"]
+[editable path="Bugs/Mob"]
