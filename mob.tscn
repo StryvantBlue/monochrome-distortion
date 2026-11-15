@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://7067kh7kyiih"]
+
+[ext_resource type="Script" uid="uid://b51m4p0j3enfv" path="res://mob.gd" id="1_nokgg"]
+[ext_resource type="Texture2D" uid="uid://q44viqkwcrx" path="res://Untitled 11-13-2026 04-43-00.png" id="2_ubaqv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p11y5"]
+atlas = ExtResource("2_ubaqv")
+region = Rect2(0, 0, 15, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5nov"]
+atlas = ExtResource("2_ubaqv")
+region = Rect2(15, 0, 15, 15)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_geuht"]
+animations = [{
+"frames": [{
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_p11y5")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_s5nov")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+
+[node name="Mob" type="RigidBody2D" unique_id=160876704 groups=["idfk"]]
+collision_mask = 0
+input_pickable = true
+gravity_scale = 0.0
+script = ExtResource("1_nokgg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1786994469 groups=["idfk"]]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_geuht")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2119342297 groups=["idfk"]]
+scale = Vector2(1.7019507, 1.5297859)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=387959066 groups=["idfk"]]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2012630972]

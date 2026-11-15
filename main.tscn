@@ -1,0 +1,260 @@
+[gd_scene format=3 uid="uid://bx4c3eqpb1hnh"]
+
+[ext_resource type="PackedScene" uid="uid://c0qkedt1vb5yn" path="res://node_2d.tscn" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://d3kqt712e1x7i" path="res://Untitled 11-11-2026 08-55-36 (3).png" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://7067kh7kyiih" path="res://mob.tscn" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://b51m4p0j3enfv" path="res://mob.gd" id="3_lquwl"]
+[ext_resource type="Texture2D" uid="uid://q44viqkwcrx" path="res://Untitled 11-13-2026 04-43-00.png" id="4_7mycd"]
+[ext_resource type="Shader" uid="uid://c3j2jcyvilqgn" path="res://new_shader.gdshader" id="6_7mycd"]
+[ext_resource type="Texture2D" uid="uid://bkoamreqy47jn" path="res://Untitled 11-11-2026 08-46-05 (1).png" id="7_272bh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p11y5"]
+atlas = ExtResource("4_7mycd")
+region = Rect2(0, 0, 15, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5nov"]
+atlas = ExtResource("4_7mycd")
+region = Rect2(15, 0, 15, 15)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_geuht"]
+animations = [{
+"frames": [{
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_p11y5")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_s5nov")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_272bh"]
+shader = ExtResource("6_7mycd")
+shader_parameter/base_speed = 3.0
+shader_parameter/density = 8.0
+shader_parameter/border_thickness = 0.15
+
+[node name="Main" type="Node2D" unique_id=532649651]
+
+[node name="Node2D" parent="." unique_id=1175423691 instance=ExtResource("1_0xm2m")]
+
+[node name="Sprite2D" parent="Node2D" index="0" unique_id=357539359]
+texture = ExtResource("2_1bvp3")
+
+[node name="Mob" type="RigidBody2D" parent="." unique_id=160876704 groups=["idfk"]]
+position = Vector2(76, 109)
+collision_mask = 0
+input_pickable = true
+gravity_scale = 0.0
+script = ExtResource("3_lquwl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Mob" unique_id=1786994469 groups=["idfk"]]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_geuht")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mob" unique_id=2119342297 groups=["idfk"]]
+scale = Vector2(1.7019507, 1.5297859)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Mob" unique_id=387959066 groups=["idfk"]]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Mob" unique_id=2012630972]
+
+[node name="Mob2" parent="." unique_id=1870421755 instance=ExtResource("2_h2yge")]
+position = Vector2(117, 94)
+rotation = -1.5707964
+
+[node name="Mob3" parent="." unique_id=1649457887 instance=ExtResource("2_h2yge")]
+position = Vector2(117, 159)
+rotation = -1.5707964
+
+[node name="Mob4" parent="." unique_id=2121013644 instance=ExtResource("2_h2yge")]
+position = Vector2(17, 83)
+rotation = -1.5707964
+
+[node name="Mob5" parent="." unique_id=1669500165 instance=ExtResource("2_h2yge")]
+position = Vector2(39, 51)
+rotation = -1.5707964
+
+[node name="Mob6" parent="." unique_id=1668334118 instance=ExtResource("2_h2yge")]
+position = Vector2(99, 42)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" parent="Mob6" index="1" unique_id=2119342297]
+scale = Vector2(1.1803944, 1.1605405)
+
+[node name="Mob7" parent="." unique_id=1209934656 instance=ExtResource("2_h2yge")]
+position = Vector2(117, 59)
+
+[node name="CollisionShape2D" parent="Mob7" index="1" unique_id=2119342297]
+scale = Vector2(1.1546898, 1.1190773)
+
+[node name="Mob19" parent="." unique_id=1438163771 instance=ExtResource("2_h2yge")]
+position = Vector2(30, 15)
+
+[node name="CollisionShape2D" parent="Mob19" index="1" unique_id=2119342297]
+scale = Vector2(1.1546898, 1.1190773)
+
+[node name="Mob8" parent="." unique_id=1081163732 instance=ExtResource("2_h2yge")]
+position = Vector2(148, 81)
+
+[node name="CollisionShape2D" parent="Mob8" index="1" unique_id=2119342297]
+scale = Vector2(1.1546898, 1.1190773)
+
+[node name="Mob9" parent="." unique_id=1314296151 instance=ExtResource("2_h2yge")]
+position = Vector2(158, 173)
+rotation = 3.1415927
+
+[node name="CollisionShape2D" parent="Mob9" index="1" unique_id=2119342297]
+scale = Vector2(1.1546898, 1.1190773)
+
+[node name="Mob10" parent="." unique_id=325729223 instance=ExtResource("2_h2yge")]
+position = Vector2(73, 153)
+
+[node name="CollisionShape2D" parent="Mob10" index="1" unique_id=2119342297]
+scale = Vector2(1.1546898, 1.1190773)
+
+[node name="Mob11" parent="." unique_id=967035576 instance=ExtResource("2_h2yge")]
+position = Vector2(28, 183)
+
+[node name="CollisionShape2D" parent="Mob11" index="1" unique_id=2119342297]
+scale = Vector2(1.1546898, 1.1190773)
+
+[node name="Mob12" parent="." unique_id=1871635222 instance=ExtResource("2_h2yge")]
+position = Vector2(109, 208)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" parent="Mob12" index="1" unique_id=2119342297]
+scale = Vector2(1.1546898, 1.1190773)
+
+[node name="Mob13" parent="." unique_id=1380747247 instance=ExtResource("2_h2yge")]
+position = Vector2(67, 221)
+rotation = -1.5707964
+
+[node name="CollisionShape2D" parent="Mob13" index="1" unique_id=2119342297]
+scale = Vector2(1.1546898, 1.1190773)
+
+[node name="Mob14" parent="." unique_id=779720199 instance=ExtResource("2_h2yge")]
+position = Vector2(169, 225)
+rotation = -1.5707964
+
+[node name="CollisionShape2D" parent="Mob14" index="1" unique_id=2119342297]
+scale = Vector2(1.1546898, 1.1190773)
+
+[node name="Mob15" parent="." unique_id=1929523669 instance=ExtResource("2_h2yge")]
+position = Vector2(149, 241)
+
+[node name="CollisionShape2D" parent="Mob15" index="1" unique_id=2119342297]
+scale = Vector2(1.1546898, 1.1190773)
+
+[node name="Mob16" parent="." unique_id=213714547 instance=ExtResource("2_h2yge")]
+position = Vector2(233, 198)
+
+[node name="CollisionShape2D" parent="Mob16" index="1" unique_id=2119342297]
+scale = Vector2(1.1546898, 1.1190773)
+
+[node name="Mob17" parent="." unique_id=1392735932 instance=ExtResource("2_h2yge")]
+position = Vector2(227, 125)
+
+[node name="CollisionShape2D" parent="Mob17" index="1" unique_id=2119342297]
+scale = Vector2(1.1546898, 1.1190773)
+
+[node name="Mob18" parent="." unique_id=1237929151 instance=ExtResource("2_h2yge")]
+position = Vector2(187, 103)
+
+[node name="CollisionShape2D" parent="Mob18" index="1" unique_id=2119342297]
+scale = Vector2(1.1546898, 1.1190773)
+
+[node name="Path1" type="Line2D" parent="." unique_id=1407073767]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+points = PackedVector2Array(-2, 119, 17, 119, 22, 121, 21, 125, 21, 128, 22, 131, 20, 135, 22, 138, 25, 141, 28, 142, 32, 141, 38, 141, 44, 141, 49, 140, 49, 134, 49, 122, 49, 118, 58, 118, 69, 119, 76, 119, 51, 119, 48, 114, 48, 99, 45, 97, 41, 96, 35, 97, 29, 97, 26, 96, 27, 92, 27, 83)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path2L" type="Line2D" parent="." unique_id=366243923]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(78, 0)
+points = PackedVector2Array(-2, 119, 17, 119, 25, 118, 29, 114, 31, 113, 36, 112, 42, 113, 46, 112, 49, 111, 49, 106, 49, 101, 49, 95)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path2R" type="Line2D" parent="." unique_id=1185108145]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(78, 0)
+points = PackedVector2Array(-2, 119, 17, 119, 25, 120, 27, 124, 27, 129, 27, 134, 28, 139, 30, 141, 40, 141, 49, 142, 49, 155, 49, 159)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path3" type="Line2D" parent="." unique_id=1376657648]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(29, -36)
+points = PackedVector2Array(-2, 119, -2, 107, 1, 104, 8, 104, 19, 104, 20, 99, 20, 94, 20, 87)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path4loss" type="Line2D" parent="." unique_id=437976993]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(51, -68)
+points = PackedVector2Array(-21, 92, -35, 92, -45, 95, -38, 97, -41, 105, -43, 101, -45, 97, -42, 90, -44, 87, -45, 84, -44, 89, -47, 89, -35, 85, -50, 90, -41, 77, -49, 93, -51, 100, -51, 105, -44, 107, -48, 77, -49, 73)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path4loss2" type="Line2D" parent="." unique_id=1412402064]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(203, 38)
+rotation = 1.5707964
+points = PackedVector2Array(-43.999996, 94, -35, 92, -45, 95, -38, 97, -41, 105, -43, 101, -45, 97, -42, 90, -44, 87, -45, 84, -44, 89, -47, 89, -35, 85, -50, 90, -41, 77, -49, 93, -51, 100, -51, 105, -44, 107, -43.999996, 92, -48, 77, -49, 73, -38.999996, 92, -16.999998, 92, -12.999996, 94, -11.999996, 100, -13.999996, 106, -10.999996, 113, -6.999996, 114, 4.000004, 114)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path5" type="Line2D" parent="." unique_id=514428484]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(-29, -47)
+points = PackedVector2Array(-30, 100, -51, 100)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[node name="Path6" type="Line2D" parent="." unique_id=1948554772]
+texture_filter = 1
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(100, -49)
+points = PackedVector2Array(-51, 80, -51, 100, -51, 76, -55, 74, -70, 74)
+width = 7.0
+texture = ExtResource("7_272bh")
+texture_mode = 1
+
+[editable path="Node2D"]
+[editable path="Mob6"]
+[editable path="Mob7"]
+[editable path="Mob19"]
+[editable path="Mob8"]
+[editable path="Mob9"]
+[editable path="Mob10"]
+[editable path="Mob11"]
+[editable path="Mob12"]
+[editable path="Mob13"]
+[editable path="Mob14"]
+[editable path="Mob15"]
+[editable path="Mob16"]
+[editable path="Mob17"]
+[editable path="Mob18"]
