@@ -24,123 +24,84 @@ texture = ExtResource("2_1bvp3")
 [node name="Bugs" type="Node2D" parent="." unique_id=992924234]
 scale = Vector2(3.1171684, 3.1171684)
 
-[node name="Mob2" parent="Bugs" unique_id=1870421755 instance=ExtResource("2_h2yge")]
+[node name="Mob2" parent="Bugs" unique_id=1870421755 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
 position = Vector2(117, 94)
 rotation = -1.5707964
+AssignedPath = [NodePath("../../Paths/CrossPath1")]
 
 [node name="Mob3" parent="Bugs" unique_id=1649457887 instance=ExtResource("2_h2yge")]
 position = Vector2(117, 159)
 rotation = -1.5707964
 
-[node name="Mob4" parent="Bugs" unique_id=2121013644 instance=ExtResource("2_h2yge")]
+[node name="Mob4" parent="Bugs" unique_id=2121013644 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
 position = Vector2(17, 83)
 rotation = -1.5707964
+AssignedPath = [NodePath("../../Paths/PathBug1"), NodePath("../../Paths/Path1")]
 
-[node name="Mob5" parent="Bugs" unique_id=1669500165 instance=ExtResource("2_h2yge")]
+[node name="Mob5" parent="Bugs" unique_id=1669500165 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
 position = Vector2(39, 51)
 rotation = -1.5707964
+AssignedPath = [NodePath("../../Paths/PathBug2"), NodePath("../../Paths/PathBug2_2"), NodePath("../../Paths/PathBug1")]
 
-[node name="Mob6" parent="Bugs" unique_id=1668334118 instance=ExtResource("2_h2yge")]
+[node name="Mob6" parent="Bugs" unique_id=1668334118 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
 position = Vector2(99, 42)
 rotation = 1.5707964
+AssignedPath = [NodePath("../../Paths/PathBug4")]
 
-[node name="CollisionShape2D" parent="Bugs/Mob6" index="1" unique_id=2119342297]
-scale = Vector2(1.1803944, 1.1605405)
-
-[node name="Mob20" parent="Bugs" unique_id=6563760 instance=ExtResource("2_h2yge")]
+[node name="Mob20" parent="Bugs" unique_id=6563760 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
 position = Vector2(179, 49)
 rotation = -1.5707964
+AssignedPath = [NodePath("../../Paths/PathBug7")]
 
-[node name="CollisionShape2D" parent="Bugs/Mob20" index="1" unique_id=2119342297]
-scale = Vector2(1.1803944, 1.1605405)
-
-[node name="Mob7" parent="Bugs" unique_id=1209934656 instance=ExtResource("2_h2yge")]
+[node name="Mob7" parent="Bugs" unique_id=1209934656 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
 position = Vector2(117, 59)
+AssignedPath = [NodePath("../../Paths/CrossPath1"), NodePath("../../Paths/PathBug2_2")]
 
-[node name="CollisionShape2D" parent="Bugs/Mob7" index="1" unique_id=2119342297]
-scale = Vector2(1.1546898, 1.1190773)
-
-[node name="Mob19" parent="Bugs" unique_id=1438163771 instance=ExtResource("2_h2yge")]
+[node name="Mob19" parent="Bugs" unique_id=1438163771 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
 position = Vector2(30, 15)
+AssignedPath = [NodePath("../../Paths/PathBug3")]
 
-[node name="CollisionShape2D" parent="Bugs/Mob19" index="1" unique_id=2119342297]
-scale = Vector2(1.1546898, 1.1190773)
-
-[node name="Mob8" parent="Bugs" unique_id=1081163732 instance=ExtResource("2_h2yge")]
+[node name="Mob8" parent="Bugs" unique_id=1081163732 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
 position = Vector2(148, 81)
-
-[node name="CollisionShape2D" parent="Bugs/Mob8" index="1" unique_id=2119342297]
-scale = Vector2(1.1546898, 1.1190773)
+AssignedPath = [NodePath("../../Paths/PathBug6"), NodePath("../../Paths/Path6_2")]
 
 [node name="Mob9" parent="Bugs" unique_id=1314296151 instance=ExtResource("2_h2yge")]
 position = Vector2(158, 173)
 rotation = -3.1415925
 
-[node name="CollisionShape2D" parent="Bugs/Mob9" index="1" unique_id=2119342297]
-scale = Vector2(1.1546898, 1.1190773)
-
 [node name="Mob10" parent="Bugs" unique_id=325729223 instance=ExtResource("2_h2yge")]
 position = Vector2(73, 153)
 
-[node name="CollisionShape2D" parent="Bugs/Mob10" index="1" unique_id=2119342297]
-scale = Vector2(1.1546898, 1.1190773)
-
 [node name="Mob11" parent="Bugs" unique_id=967035576 instance=ExtResource("2_h2yge")]
 position = Vector2(28, 183)
-
-[node name="CollisionShape2D" parent="Bugs/Mob11" index="1" unique_id=2119342297]
-scale = Vector2(1.1546898, 1.1190773)
 
 [node name="Mob12" parent="Bugs" unique_id=1871635222 instance=ExtResource("2_h2yge")]
 position = Vector2(109, 203)
 rotation = 1.5707964
 
-[node name="CollisionShape2D" parent="Bugs/Mob12" index="1" unique_id=2119342297]
-scale = Vector2(1.1546898, 1.1190773)
-
 [node name="Mob13" parent="Bugs" unique_id=1380747247 instance=ExtResource("2_h2yge")]
 position = Vector2(67, 221)
 rotation = -1.5707964
-
-[node name="CollisionShape2D" parent="Bugs/Mob13" index="1" unique_id=2119342297]
-scale = Vector2(1.1546898, 1.1190773)
 
 [node name="Mob14" parent="Bugs" unique_id=779720199 instance=ExtResource("2_h2yge")]
 position = Vector2(169, 225)
 rotation = -1.5707964
 
-[node name="CollisionShape2D" parent="Bugs/Mob14" index="1" unique_id=2119342297]
-scale = Vector2(1.1546898, 1.1190773)
-
 [node name="Mob15" parent="Bugs" unique_id=1929523669 instance=ExtResource("2_h2yge")]
 position = Vector2(149, 241)
-
-[node name="CollisionShape2D" parent="Bugs/Mob15" index="1" unique_id=2119342297]
-scale = Vector2(1.1546898, 1.1190773)
 
 [node name="Mob16" parent="Bugs" unique_id=213714547 instance=ExtResource("2_h2yge")]
 position = Vector2(233, 198)
 
-[node name="CollisionShape2D" parent="Bugs/Mob16" index="1" unique_id=2119342297]
-scale = Vector2(1.1546898, 1.1190773)
-
 [node name="Mob17" parent="Bugs" unique_id=1392735932 instance=ExtResource("2_h2yge")]
 position = Vector2(227, 125)
-
-[node name="CollisionShape2D" parent="Bugs/Mob17" index="1" unique_id=2119342297]
-scale = Vector2(1.1546898, 1.1190773)
 
 [node name="Mob18" parent="Bugs" unique_id=1237929151 instance=ExtResource("2_h2yge")]
 position = Vector2(187, 103)
 
-[node name="CollisionShape2D" parent="Bugs/Mob18" index="1" unique_id=2119342297]
-scale = Vector2(1.1546898, 1.1190773)
-
-[node name="Mob" parent="Bugs" unique_id=108280175 instance=ExtResource("2_h2yge")]
+[node name="Mob" parent="Bugs" unique_id=108280175 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
 position = Vector2(76.35135, 109.07335)
-
-[node name="CollisionShape2D" parent="Bugs/Mob" index="1" unique_id=2119342297]
-scale = Vector2(1.1546898, 1.1190773)
+AssignedPath = [NodePath("../../Paths/PathBug5"), NodePath("../../Paths/PathBug5_2")]
 
 [node name="Paths" type="Node2D" parent="." unique_id=2136322964]
 scale = Vector2(3.128571, 3.128571)
@@ -153,7 +114,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path2L" type="Line2D" parent="Paths" unique_id=366243923]
+[node name="PathBug5_2" type="Line2D" parent="Paths" unique_id=366243923]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(78, 0)
@@ -162,7 +123,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path2R" type="Line2D" parent="Paths" unique_id=1185108145]
+[node name="PathBug5" type="Line2D" parent="Paths" unique_id=1185108145]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(78, 0)
@@ -171,7 +132,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path3" type="Line2D" parent="Paths" unique_id=1376657648]
+[node name="PathBug1" type="Line2D" parent="Paths" unique_id=1376657648]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(29, -36)
@@ -180,7 +141,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path4loss" type="Line2D" parent="Paths" unique_id=437976993]
+[node name="PathBug3" type="Line2D" parent="Paths" unique_id=437976993]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(51, -68)
@@ -189,7 +150,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path4loss2" type="Line2D" parent="Paths" unique_id=1412402064]
+[node name="PathBug4" type="Line2D" parent="Paths" unique_id=1412402064]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(203, 38)
@@ -199,7 +160,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path4loss3" type="Line2D" parent="Paths" unique_id=575793079]
+[node name="PathBug7" type="Line2D" parent="Paths" unique_id=575793079]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(282, 73)
@@ -353,7 +314,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path10" type="Line2D" parent="Paths" unique_id=1928789983]
+[node name="Path6_2" type="Line2D" parent="Paths" unique_id=1928789983]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(209, -8)
@@ -362,7 +323,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path9" type="Line2D" parent="Paths" unique_id=806726452]
+[node name="PathBug6" type="Line2D" parent="Paths" unique_id=806726452]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(209, -9)
@@ -371,7 +332,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path8" type="Line2D" parent="Paths" unique_id=1215183978]
+[node name="CrossPath1" type="Line2D" parent="Paths" unique_id=1215183978]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(168, -31)
@@ -380,7 +341,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path7" type="Line2D" parent="Paths" unique_id=216065200]
+[node name="PathBug2_2" type="Line2D" parent="Paths" unique_id=216065200]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(101, -53)
@@ -389,7 +350,7 @@ width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
 
-[node name="Path6" type="Line2D" parent="Paths" unique_id=1948554772]
+[node name="PathBug2" type="Line2D" parent="Paths" unique_id=1948554772]
 texture_filter = 1
 material = SubResource("ShaderMaterial_272bh")
 position = Vector2(100, -49)
@@ -397,20 +358,3 @@ points = PackedVector2Array(-51, 80, -51, 100, -51, 76, -55, 74, -70, 74)
 width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
-
-[editable path="Bugs/Mob6"]
-[editable path="Bugs/Mob20"]
-[editable path="Bugs/Mob7"]
-[editable path="Bugs/Mob19"]
-[editable path="Bugs/Mob8"]
-[editable path="Bugs/Mob9"]
-[editable path="Bugs/Mob10"]
-[editable path="Bugs/Mob11"]
-[editable path="Bugs/Mob12"]
-[editable path="Bugs/Mob13"]
-[editable path="Bugs/Mob14"]
-[editable path="Bugs/Mob15"]
-[editable path="Bugs/Mob16"]
-[editable path="Bugs/Mob17"]
-[editable path="Bugs/Mob18"]
-[editable path="Bugs/Mob"]
