@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://qibe7m1w173e"
-path="res://.godot/imported/Backspace1.wav-ebfe03f85b2637d6edae4637465e435a.sample"
+uid="uid://x3kek2yyjs8m"
+path="res://.godot/imported/Backspace2.wav-277048afd72eb53a287c32711ca132a2.sample"
 
 [deps]
 
-source_file="res://Backspace1.wav"
-dest_files=["res://.godot/imported/Backspace1.wav-ebfe03f85b2637d6edae4637465e435a.sample"]
+source_file="res://SFXs/Backspace2.wav"
+dest_files=["res://.godot/imported/Backspace2.wav-277048afd72eb53a287c32711ca132a2.sample"]
 
 [params]
 

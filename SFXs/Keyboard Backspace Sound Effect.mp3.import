@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dxypya064m5dt"
+path="res://.godot/imported/Keyboard Backspace Sound Effect.mp3-102efac48a29ac523b3d9bb123e07524.mp3str"
+
+[deps]
+
+source_file="res://SFXs/Keyboard Backspace Sound Effect.mp3"
+dest_files=["res://.godot/imported/Keyboard Backspace Sound Effect.mp3-102efac48a29ac523b3d9bb123e07524.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

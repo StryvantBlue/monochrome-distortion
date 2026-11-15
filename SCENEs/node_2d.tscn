@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c0qkedt1vb5yn"]
 
-[ext_resource type="Texture2D" uid="uid://x282rmoh8ank" path="res://Untitled 11-11-2026 08-55-36 (1).png" id="1_epypp"]
-[ext_resource type="Texture2D" uid="uid://bkoamreqy47jn" path="res://Untitled 11-11-2026 08-46-05 (1).png" id="2_0hol4"]
-[ext_resource type="Script" uid="uid://btkp6pb265f4j" path="res://mouse_cursor.gd" id="3_q6r6c"]
+[ext_resource type="Texture2D" uid="uid://x282rmoh8ank" path="res://SPRITEs/Untitled 11-11-2026 08-55-36 (1).png" id="1_epypp"]
+[ext_resource type="Texture2D" uid="uid://bkoamreqy47jn" path="res://SPRITEs/Untitled 11-11-2026 08-46-05 (1).png" id="2_0hol4"]
+[ext_resource type="Script" uid="uid://btkp6pb265f4j" path="res://SCRIPTs/mouse_cursor.gd" id="3_q6r6c"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_epypp"]
 random_pitch = 1.3218727

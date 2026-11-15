@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://bx4c3eqpb1hnh"]
 
-[ext_resource type="PackedScene" uid="uid://c0qkedt1vb5yn" path="res://node_2d.tscn" id="1_0xm2m"]
-[ext_resource type="Texture2D" uid="uid://d3kqt712e1x7i" path="res://Untitled 11-11-2026 08-55-36 (3).png" id="2_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://7067kh7kyiih" path="res://mob.tscn" id="2_h2yge"]
-[ext_resource type="Script" uid="uid://b51m4p0j3enfv" path="res://mob.gd" id="3_lquwl"]
-[ext_resource type="Texture2D" uid="uid://q44viqkwcrx" path="res://Untitled 11-13-2026 04-43-00.png" id="4_7mycd"]
+[ext_resource type="PackedScene" uid="uid://c0qkedt1vb5yn" path="res://SCENEs/node_2d.tscn" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://d3kqt712e1x7i" path="res://SPRITEs/Untitled 11-11-2026 08-55-36 (3).png" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://7067kh7kyiih" path="res://SCENEs/mob.tscn" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://b51m4p0j3enfv" path="res://SCRIPTs/mob.gd" id="3_lquwl"]
+[ext_resource type="Texture2D" uid="uid://q44viqkwcrx" path="res://SPRITEs/Untitled 11-13-2026 04-43-00.png" id="4_7mycd"]
 [ext_resource type="Shader" uid="uid://c3j2jcyvilqgn" path="res://new_shader.gdshader" id="6_7mycd"]
-[ext_resource type="Texture2D" uid="uid://bkoamreqy47jn" path="res://Untitled 11-11-2026 08-46-05 (1).png" id="7_272bh"]
+[ext_resource type="Texture2D" uid="uid://bkoamreqy47jn" path="res://SPRITEs/Untitled 11-11-2026 08-46-05 (1).png" id="7_272bh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p11y5"]
 atlas = ExtResource("4_7mycd")

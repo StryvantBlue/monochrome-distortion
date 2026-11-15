@@ -3,9 +3,9 @@ extends Sprite2D
 @onready var audio_player: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 var sounds: Array[AudioStream] = [
-	preload("res://Backspace1.wav"),
-	preload("res://Backspace2.wav"),
-	preload("res://Backspace3.wav")
+	preload("res://SFXs/Backspace1.wav"),
+	preload("res:///SFXs/Backspace2.wav"),
+	preload("res:///SFXs/Backspace3.wav")
 ]
 
 var rest_angle: float
