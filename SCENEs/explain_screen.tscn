@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://bh4da2sf5ukc5"]
+
+[ext_resource type="Script" uid="uid://dh16nkulu5nmk" path="res://SCRIPTs/explain_screen.gd" id="1_my6eh"]
+[ext_resource type="FontFile" uid="uid://bqhdkynqkgb3p" path="res://PressStart2P-Regular.ttf" id="1_uxhml"]
+[ext_resource type="Texture2D" uid="uid://q44viqkwcrx" path="res://SPRITEs/bug_anim.png" id="2_my6eh"]
+[ext_resource type="Texture2D" uid="uid://bkoamreqy47jn" path="res://SPRITEs/handle.png" id="4_3lqpx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p11y5"]
+atlas = ExtResource("2_my6eh")
+region = Rect2(0, 0, 15, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5nov"]
+atlas = ExtResource("2_my6eh")
+region = Rect2(15, 0, 15, 15)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3lqpx"]
+animations = [{
+"frames": [{
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_p11y5")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_s5nov")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="explanation" type="Node2D" unique_id=746157671]
+script = ExtResource("1_my6eh")
+
+[node name="Label2" type="Label" parent="." unique_id=275343434]
+offset_left = 166.0
+offset_top = 186.0
+offset_right = 758.0
+offset_bottom = 342.0
+theme_override_fonts/font = ExtResource("1_uxhml")
+theme_override_font_sizes/font_size = 25
+text = "THIS IS A BACKSPACE SWORD, USED TO SLAY BUGS!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label" type="Label" parent="." unique_id=1465153854]
+offset_left = 92.0
+offset_top = 435.0
+offset_right = 731.0
+offset_bottom = 591.0
+theme_override_fonts/font = ExtResource("1_uxhml")
+theme_override_font_sizes/font_size = 25
+text = "CONNECT THE WIRES TO MAKE THE DATA GO THROUGH!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="mobsprite" type="AnimatedSprite2D" parent="." unique_id=1603344010]
+position = Vector2(408.00003, 427.00003)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_3lqpx")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Timer" type="Timer" parent="." unique_id=1853968274]
+wait_time = 5.0
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=800692832]
+position = Vector2(143, 260)
+rotation = -0.7853982
+scale = Vector2(2.2953305, 2.317427)
+texture = ExtResource("4_3lqpx")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
