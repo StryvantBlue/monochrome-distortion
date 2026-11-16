@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d3kqt712e1x7i" path="res://SPRITEs/level1.png" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://7067kh7kyiih" path="res://SCENEs/mob.tscn" id="2_h2yge"]
 [ext_resource type="Shader" uid="uid://c3j2jcyvilqgn" path="res://new_shader.gdshader" id="6_7mycd"]
+[ext_resource type="FontFile" uid="uid://bqhdkynqkgb3p" path="res://PressStart2P-Regular.ttf" id="6_hxjdr"]
 [ext_resource type="Texture2D" uid="uid://bkoamreqy47jn" path="res://SPRITEs/handle.png" id="7_272bh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_272bh"]
@@ -11,6 +12,9 @@ shader = ExtResource("6_7mycd")
 shader_parameter/base_speed = 3.0
 shader_parameter/density = 8.0
 shader_parameter/border_thickness = 0.15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c3hu5"]
+bg_color = Color(0, 0, 0, 0.4862745)
 
 [node name="Main" type="Node2D" unique_id=532649651]
 
@@ -47,15 +51,15 @@ CanBeKilled = true
 position = Vector2(39, 51)
 rotation = -1.5707964
 AssignedPath = [NodePath("../../Paths/PathBug2"), NodePath("../../Paths/PathBug2_2"), NodePath("../../Paths/PathBug1")]
-ConnectedBugs = [NodePath("../Mob19"), NodePath("../Mob6"), NodePath("../Mob4")]
+ConnectedBugs = [NodePath("../LOSS"), NodePath("../LOSS2"), NodePath("../Mob4")]
 
-[node name="Mob6" parent="Bugs" unique_id=1668334118 node_paths=PackedStringArray("AssignedPath", "ConnectedBugs") instance=ExtResource("2_h2yge")]
+[node name="LOSS2" parent="Bugs" unique_id=1668334118 node_paths=PackedStringArray("AssignedPath", "ConnectedBugs") instance=ExtResource("2_h2yge")]
 position = Vector2(99, 42)
 rotation = 1.5707964
 AssignedPath = [NodePath("../../Paths/PathBug4"), NodePath("../../Paths/PathBug2")]
-ConnectedBugs = [NodePath("../Mob5"), NodePath("../Mob19"), NodePath("../Mob7")]
+ConnectedBugs = [NodePath("../Mob5"), NodePath("../LOSS"), NodePath("../Mob7")]
 
-[node name="Mob20" parent="Bugs" unique_id=6563760 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
+[node name="LOSS3" parent="Bugs" unique_id=6563760 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
 position = Vector2(179, 49)
 rotation = -1.5707964
 AssignedPath = [NodePath("../../Paths/PathBug7")]
@@ -63,16 +67,16 @@ AssignedPath = [NodePath("../../Paths/PathBug7")]
 [node name="Mob7" parent="Bugs" unique_id=1209934656 node_paths=PackedStringArray("AssignedPath", "ConnectedBugs") instance=ExtResource("2_h2yge")]
 position = Vector2(117, 59)
 AssignedPath = [NodePath("../../Paths/CrossPath1"), NodePath("../../Paths/PathBug2_2")]
-ConnectedBugs = [NodePath("../Mob6"), NodePath("../Mob8"), NodePath("../Mob2")]
+ConnectedBugs = [NodePath("../LOSS2"), NodePath("../Mob8"), NodePath("../Mob2")]
 
-[node name="Mob19" parent="Bugs" unique_id=1438163771 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
+[node name="LOSS" parent="Bugs" unique_id=1438163771 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
 position = Vector2(30, 15)
 AssignedPath = [NodePath("../../Paths/PathBug3"), NodePath("../../Paths/PathBug2")]
 
 [node name="Mob8" parent="Bugs" unique_id=1081163732 node_paths=PackedStringArray("AssignedPath", "ConnectedBugs") instance=ExtResource("2_h2yge")]
 position = Vector2(148, 81)
 AssignedPath = [NodePath("../../Paths/PathBug6"), NodePath("../../Paths/PathBug8"), NodePath("../../Paths/CrossPath1")]
-ConnectedBugs = [NodePath("../Mob20"), NodePath("../Mob18"), NodePath("../Mob7")]
+ConnectedBugs = [NodePath("../LOSS3"), NodePath("../Mob18"), NodePath("../Mob7")]
 
 [node name="Mob9" parent="Bugs" unique_id=1314296151 node_paths=PackedStringArray("AssignedPath", "ConnectedBugs") instance=ExtResource("2_h2yge")]
 position = Vector2(158, 173)
@@ -83,9 +87,9 @@ ConnectedBugs = [NodePath("../Mob3")]
 [node name="Mob10" parent="Bugs" unique_id=325729223 node_paths=PackedStringArray("AssignedPath", "ConnectedBugs") instance=ExtResource("2_h2yge")]
 position = Vector2(73, 153)
 AssignedPath = [NodePath("../../Paths/Path17"), NodePath("../../Paths/Path18")]
-ConnectedBugs = [NodePath("../Mob11")]
+ConnectedBugs = [NodePath("../LOSS4")]
 
-[node name="Mob11" parent="Bugs" unique_id=967035576 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
+[node name="LOSS4" parent="Bugs" unique_id=967035576 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
 position = Vector2(28, 183)
 AssignedPath = [NodePath("../../Paths/Path18"), NodePath("../../Paths/Path22LOSS")]
 
@@ -93,14 +97,14 @@ AssignedPath = [NodePath("../../Paths/Path18"), NodePath("../../Paths/Path22LOSS
 position = Vector2(109, 203)
 rotation = 1.5707964
 AssignedPath = [NodePath("../../Paths/Path17"), NodePath("../../Paths/Path13"), NodePath("../../Paths/Path20"), NodePath("../../Paths/Path19")]
-ConnectedBugs = [NodePath("../Mob13"), NodePath("../Mob15")]
+ConnectedBugs = [NodePath("../LOSS5"), NodePath("../Mob15")]
 
-[node name="Mob13" parent="Bugs" unique_id=1380747247 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
+[node name="LOSS5" parent="Bugs" unique_id=1380747247 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
 position = Vector2(67, 221)
 rotation = -1.5707964
 AssignedPath = [NodePath("../../Paths/Path20"), NodePath("../../Paths/Path21LOSS")]
 
-[node name="Mob14" parent="Bugs" unique_id=779720199 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
+[node name="LOSS6" parent="Bugs" unique_id=779720199 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
 position = Vector2(169, 225)
 rotation = -1.5707964
 AssignedPath = [NodePath("../../Paths/Path16"), NodePath("../../Paths/Path20LOSS")]
@@ -108,20 +112,20 @@ AssignedPath = [NodePath("../../Paths/Path16"), NodePath("../../Paths/Path20LOSS
 [node name="Mob15" parent="Bugs" unique_id=1929523669 node_paths=PackedStringArray("AssignedPath", "ConnectedBugs") instance=ExtResource("2_h2yge")]
 position = Vector2(149, 241)
 AssignedPath = [NodePath("../../Paths/Path16"), NodePath("../../Paths/Path19"), NodePath("../../Paths/Path15"), NodePath("../../Paths/Path20")]
-ConnectedBugs = [NodePath("../Mob14"), NodePath("../Mob16")]
+ConnectedBugs = [NodePath("../LOSS6"), NodePath("../LOSS7")]
 
-[node name="Mob16" parent="Bugs" unique_id=213714547 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
+[node name="LOSS7" parent="Bugs" unique_id=213714547 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
 position = Vector2(233, 198)
 AssignedPath = [NodePath("../../Paths/Path5"), NodePath("../../Paths/Path15"), NodePath("../../Paths/Path16"), NodePath("../../Paths/Path14"), NodePath("../../Paths/PathBug9")]
 
-[node name="Mob17" parent="Bugs" unique_id=1392735932 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
+[node name="FINISH" parent="Bugs" unique_id=1392735932 node_paths=PackedStringArray("AssignedPath") instance=ExtResource("2_h2yge")]
 position = Vector2(227, 125)
 AssignedPath = [NodePath("../../Paths/END"), NodePath("../../Paths/PathBug9")]
 
 [node name="Mob18" parent="Bugs" unique_id=1237929151 node_paths=PackedStringArray("AssignedPath", "ConnectedBugs") instance=ExtResource("2_h2yge")]
 position = Vector2(187, 103)
 AssignedPath = [NodePath("../../Paths/PathBug8"), NodePath("../../Paths/PathBug9"), NodePath("../../Paths/Path14"), NodePath("../../Paths/Path15"), NodePath("../../Paths/Path16"), NodePath("../../Paths/PathBug6")]
-ConnectedBugs = [NodePath("../Mob17"), NodePath("../Mob9"), NodePath("../Mob16")]
+ConnectedBugs = [NodePath("../FINISH"), NodePath("../Mob9"), NodePath("../LOSS7")]
 
 [node name="Mob" parent="Bugs" unique_id=108280175 node_paths=PackedStringArray("AssignedPath", "ConnectedBugs") instance=ExtResource("2_h2yge")]
 position = Vector2(76.35135, 109.07335)
@@ -384,3 +388,29 @@ points = PackedVector2Array(-51, 80, -51, 100, -51, 76, -55, 74, -70, 74)
 width = 7.0
 texture = ExtResource("7_272bh")
 texture_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=606869766]
+offset_left = 8.0
+offset_top = 331.0
+offset_right = 88.0
+offset_bottom = 354.0
+theme_override_fonts/font = ExtResource("6_hxjdr")
+text = "START"
+
+[node name="Label2" type="Label" parent="." unique_id=198248974]
+offset_left = 691.0
+offset_top = 292.0
+offset_right = 787.0
+offset_bottom = 327.0
+theme_override_fonts/font = ExtResource("6_hxjdr")
+text = "FINISH
+HERE!"
+horizontal_alignment = 2
+
+[node name="DarkPanel" type="Panel" parent="." unique_id=2012164780]
+visible = false
+offset_left = -4.0
+offset_top = -3.0
+offset_right = 805.0
+offset_bottom = 802.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_c3hu5")

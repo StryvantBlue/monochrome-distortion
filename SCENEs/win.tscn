@@ -1,0 +1,297 @@
+[gd_scene format=3 uid="uid://rsj8ud4wy68q"]
+
+[ext_resource type="Texture2D" uid="uid://q44viqkwcrx" path="res://SPRITEs/bug_anim.png" id="1_3f06c"]
+[ext_resource type="FontFile" uid="uid://bqhdkynqkgb3p" path="res://PressStart2P-Regular.ttf" id="2_4aifx"]
+[ext_resource type="Script" uid="uid://buqmvubkffbn5" path="res://SCRIPTs/cutscene.gd" id="3_4aifx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p11y5"]
+atlas = ExtResource("1_3f06c")
+region = Rect2(0, 0, 15, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5nov"]
+atlas = ExtResource("1_3f06c")
+region = Rect2(15, 0, 15, 15)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7ylhi"]
+animations = [{
+"frames": [{
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_p11y5")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_s5nov")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_2alie"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Row1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Row2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1588, 139)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_a82br"]
+resource_name = "win"
+length = 17.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Row1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-730.335, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Row3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(6.0333333, 9.033334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 253.55), Vector2(-730.335, 253.55)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Row2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3, 6.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1588, 139), Vector2(-780.54, 142.835)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 10.1, 10.7, 11.366667, 12, 12.633333, 13.2, 13.833333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hcdyt"]
+_data = {
+&"RESET": SubResource("Animation_2alie"),
+&"win": SubResource("Animation_a82br")
+}
+
+[node name="Node2D" type="Node2D" unique_id=864565993]
+
+[node name="Row1" type="Node2D" parent="." unique_id=854639330]
+
+[node name="mobsprite" type="AnimatedSprite2D" parent="Row1" unique_id=1664236621]
+position = Vector2(865.00006, 394)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_7ylhi")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="mobsprite2" type="AnimatedSprite2D" parent="Row1" unique_id=1145992235]
+position = Vector2(962.00006, 394)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_7ylhi")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="mobsprite3" type="AnimatedSprite2D" parent="Row1" unique_id=2119265792]
+position = Vector2(1055, 394)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_7ylhi")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="mobsprite4" type="AnimatedSprite2D" parent="Row1" unique_id=766953685]
+position = Vector2(1152, 394)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_7ylhi")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="mobsprite5" type="AnimatedSprite2D" parent="Row1" unique_id=214663499]
+position = Vector2(1248, 394)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_7ylhi")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="mobsprite6" type="AnimatedSprite2D" parent="Row1" unique_id=14708504]
+position = Vector2(1345, 394)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_7ylhi")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="mobsprite7" type="AnimatedSprite2D" parent="Row1" unique_id=2040102934]
+position = Vector2(1438, 394)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_7ylhi")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Row2" type="Node2D" parent="." unique_id=472568077]
+position = Vector2(-1588, 139)
+
+[node name="mobsprite" type="AnimatedSprite2D" parent="Row2" unique_id=1334673211]
+position = Vector2(865.00006, 394)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_7ylhi")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="mobsprite2" type="AnimatedSprite2D" parent="Row2" unique_id=1007460873]
+position = Vector2(962.00006, 394)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_7ylhi")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="mobsprite3" type="AnimatedSprite2D" parent="Row2" unique_id=1578256024]
+position = Vector2(1055, 394)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_7ylhi")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="mobsprite4" type="AnimatedSprite2D" parent="Row2" unique_id=556593273]
+position = Vector2(1152, 394)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_7ylhi")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="mobsprite5" type="AnimatedSprite2D" parent="Row2" unique_id=1988529237]
+position = Vector2(1248, 394)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_7ylhi")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="mobsprite6" type="AnimatedSprite2D" parent="Row2" unique_id=645393126]
+position = Vector2(1345, 394)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_7ylhi")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="mobsprite7" type="AnimatedSprite2D" parent="Row2" unique_id=914185791]
+position = Vector2(1438, 394)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_7ylhi")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Row3" type="Node2D" parent="." unique_id=1283815408]
+position = Vector2(0, 253.55)
+
+[node name="mobsprite" type="AnimatedSprite2D" parent="Row3" unique_id=265316758]
+position = Vector2(865.00006, 394)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_7ylhi")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="mobsprite2" type="AnimatedSprite2D" parent="Row3" unique_id=339108200]
+position = Vector2(962.00006, 394)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_7ylhi")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="mobsprite3" type="AnimatedSprite2D" parent="Row3" unique_id=74612140]
+position = Vector2(1055, 394)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_7ylhi")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="mobsprite4" type="AnimatedSprite2D" parent="Row3" unique_id=214724165]
+position = Vector2(1152, 394)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_7ylhi")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="mobsprite5" type="AnimatedSprite2D" parent="Row3" unique_id=451785642]
+position = Vector2(1248, 394)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_7ylhi")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="mobsprite6" type="AnimatedSprite2D" parent="Row3" unique_id=302800686]
+position = Vector2(1345, 394)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_7ylhi")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="mobsprite7" type="AnimatedSprite2D" parent="Row3" unique_id=1782053830]
+position = Vector2(1438, 394)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_7ylhi")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Label" type="Label" parent="." unique_id=542739252]
+offset_left = 177.0
+offset_top = 89.0
+offset_right = 631.0
+offset_bottom = 166.0
+theme_override_fonts/font = ExtResource("2_4aifx")
+theme_override_font_sizes/font_size = 40
+text = "YOU WIN!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=247433503]
+libraries/ = SubResource("AnimationLibrary_hcdyt")
+script = ExtResource("3_4aifx")
+anim_name = "win"
